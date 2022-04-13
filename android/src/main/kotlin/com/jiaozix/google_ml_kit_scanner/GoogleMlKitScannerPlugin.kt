@@ -17,7 +17,7 @@ class GoogleMlKitScannerPlugin : FlutterPlugin {
     private lateinit var channel: MethodChannel
 
     override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "google_ml_kit_scanner")
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "google_ml_kit")
         channel.setMethodCallHandler(MlKitMethodCallHandler(flutterPluginBinding.applicationContext))
     }
 
